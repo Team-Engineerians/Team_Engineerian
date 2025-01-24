@@ -2,7 +2,7 @@ import React from 'react'
 
 const InfiniteScroll = () => {
   return (
-    <div className="w-full inline-flex gap-20 flex-nowrap lg:overflow-hidden">
+    <div className="w-[70%] inline-flex gap-20 flex-nowrap lg:overflow-hidden">
       <div className="flex items-center gap-20 justify-center animate-infinite-scroll">
         <div className="flex items-center gap-2">
           <svg
