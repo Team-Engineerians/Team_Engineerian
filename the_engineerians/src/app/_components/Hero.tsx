@@ -12,8 +12,13 @@ const Hero = () => {
           minHeight: "100vh",
       }}
     >
-      <div className="flex w-full h-[917.001px] justify-center flex-shrink-0 bg-white opacity-0" >
-        <h1 className='text-white'>Hello</h1>
+      <div className="flex w-full h-[917.001px] justify-center gap-[230px] flex-shrink-0 bg-[rgba(255,255,255,0.0)] opacity-100" >
+      <div className="w-[1px] h-[917.001px] opacity-10 bg-[rgba(255,255,255,0.8)]"></div>
+      <div className="w-[1px] h-[917.001px] opacity-10 bg-[rgba(255,255,255,0.8)]"></div>
+      <div className="w-[1px] h-[917.001px] opacity-10 bg-[rgba(255,255,255,0.8)]"></div>
+      <div className="w-[1px] h-[917.001px] opacity-10 bg-[rgba(255,255,255,0.8)]"></div>
+      <div className="w-[1px] h-[917.001px] opacity-10 bg-[rgba(255,255,255,0.8)]"></div>
+      <div className="w-[1px] h-[917.001px] opacity-10 bg-[rgba(255,255,255,0.8)]"></div>
       </div>
     </div>
     
