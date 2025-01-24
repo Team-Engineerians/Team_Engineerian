@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center text-white">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#101010] text-white">
         <h1>Hi From Engineerians</h1>
       </main>
     </HydrateClient>
