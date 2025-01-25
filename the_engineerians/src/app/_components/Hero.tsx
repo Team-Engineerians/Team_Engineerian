@@ -1,4 +1,5 @@
 import React from "react";
+import InfiniteScroll from "./InfiniteScroll";
 
 const Hero = () => {
   return (
@@ -68,6 +69,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
+        <InfiniteScroll />
       </div>
     </div>
   );
