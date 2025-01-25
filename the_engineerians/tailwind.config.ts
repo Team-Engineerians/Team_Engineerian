@@ -1,19 +1,19 @@
-import { type Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
       fontFamily: {
-        sequel: ['Sequel Sans', 'sans-serif'],
-        inter: ["Inter", 'serif'],
+        sequel: ["Sequel Sans", "sans-serif"],
+        inter: ["Inter", "serif"],
       },
       keyframes: {
-        "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
         },
         glow: {
           "0%, 100%": { boxShadow: "0 0 5px 2px rgba(72, 187, 120, 0.5)" },
@@ -21,10 +21,11 @@ export default {
         },
       },
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
-        "glow": "glow 2s infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        glow: "glow 2s infinite",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
