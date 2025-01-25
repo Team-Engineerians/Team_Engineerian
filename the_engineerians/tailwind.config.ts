@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sequel: ["Sequel Sans", "sans-serif"],
-        inter: ["Inter", "serif"],
+        sequel: ["Sequel", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       keyframes: {
         scroll: {

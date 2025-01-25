@@ -6,8 +6,8 @@
 
 
 @font-face {
-    font-family: 'Sequel Sans';
-    src: url('/fonts/Sequel-Sans-SBD.ttf') format('truetype');
+    font-family: 'Sequel';
+    src: url('/fonts/Sequel-Sans/Sequel-Sans-SBD.ttf') format('truetype');
     font-weight: 420;
-    font-style: semibold-display;
+    font-style: normal;
   }
