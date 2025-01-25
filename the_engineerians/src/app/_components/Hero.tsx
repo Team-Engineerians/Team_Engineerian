@@ -11,7 +11,7 @@ const Hero = () => {
         width: "100%",
         height: "100%",
         minHeight: "100%",
-        backgroundImage: "url('/assets/bg-img.svg')",
+        backgroundImage: "url('/assets/bg-img1.svg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
