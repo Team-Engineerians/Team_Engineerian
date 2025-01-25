@@ -3,6 +3,9 @@ const config = {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         sequel: ["Sequel", "sans-serif"],
         inter: ["Inter", "sans-serif"],
