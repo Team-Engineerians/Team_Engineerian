@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-row justify-between mb-[39px] ">
           <div className=" text-white w-[618px] h-auto text-[95px] font-sequel leading-[1.2] " >
-            <p > Dream big, <br />We’ll engineer<br /> the rest. </p>
+            <p> Dream big, <br />We’ll<span className="text-[#EC4E39]"> engineer</span><br /> the rest. </p>
           </div>
           <div className="text-end w-[326px]" >
             <p className="font-inter text-[20px] mt-5 text-[#FFFFFF] leading-[1.6] " >
