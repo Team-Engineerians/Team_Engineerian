@@ -41,7 +41,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative inset-0 z-10 my-60 flex h-[517.001px] w-full flex-col gap-[60px] px-[10rem] text-[28px]">
+      <div className="relative inset-0 z-10 my-40 flex h-[517.001px] w-full flex-col gap-[60px] px-[10rem] text-[28px]">
         <p className="font-inter">The Engineerians</p>
         <div className="flex h-auto w-full items-stretch justify-between">
           <div className="flex h-auto w-[45rem] flex-col items-start">
