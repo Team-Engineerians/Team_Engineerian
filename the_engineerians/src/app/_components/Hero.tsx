@@ -47,7 +47,7 @@ const Hero = () => {
         <span className="text-[28px] font-inter" > The Engineerians </span>
         </div>
         <div className="flex flex-row justify-between mb-[39px] ">
-          <div className=" w-[618px] h-auto text-[80px] font-sequel " >
+          <div className=" w-[618px] h-auto text-[80px] font-sequel leading-[1.2] " >
             <p > Dream big, <br />We’ll engineer<br /> the rest. </p>
           </div>
           <div className="text-end w-[326px]" >
