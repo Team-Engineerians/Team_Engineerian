@@ -27,7 +27,7 @@ const Hero = () => {
           pointerEvents: "none", // Makes it non-interactive
         }}
       >
-        {[...Array(6)].map((_, index) => (
+        {Array.from({ length: 6 }).map((_, index) => (
           <div
             key={index}
             style={{
@@ -42,7 +42,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative inset-0 z-10 my-40 flex h-[517.001px] w-full flex-col gap-[60px] px-[10rem] text-[28px]">
+      <div className="relative inset-0 z-10 my-32 flex h-[517.001px] w-full flex-col gap-[60px] px-[10rem] text-[28px]">
         <p className="font-inter">The Engineerians</p>
         <div className="flex h-auto w-full items-stretch justify-between">
           <div className="flex h-auto w-[45rem] flex-col items-start">
@@ -69,7 +69,10 @@ const Hero = () => {
             </p>
           </div>
         </div>
+          
+        <div  className="mt-[100px]">
         <InfiniteScroll />
+        </div>
       </div>
     </div>
   );
