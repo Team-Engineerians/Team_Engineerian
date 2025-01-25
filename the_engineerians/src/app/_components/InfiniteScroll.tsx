@@ -8,7 +8,7 @@ export function InfiniteMovingCardsDemo() {
     <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         direction="left"
-        speed="fast"
+        speed="normal"
       />
     </div>
   );
