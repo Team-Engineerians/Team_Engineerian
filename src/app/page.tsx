@@ -4,6 +4,7 @@ import { api, HydrateClient } from "~/trpc/server";
 // import InfiniteScroll from './_components/InfiniteScroll';
 import Hero from './_components/Hero';
 import About from './_components/About';
+import Buildeverything from './_components/Buildeverything'
 
 export default async function Home() {
   // const hello = await api.post.hello({ text: "from tRPC" });
@@ -15,7 +16,8 @@ export default async function Home() {
       <main className="flex min-h-screen flex-col items-center justify-center bg-[#000]">
         <Hero />
         {/* <InfiniteScroll /> */}
-        <About/>
+        <About />
+        <Buildeverything />
       </main>
     </HydrateClient>
   );
