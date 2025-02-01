@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 z-50 ${
+      className={`fixed pt-[39px] left-1/2 transform -translate-x-1/2 bg-blend-color-burn transition-opacity duration-300 z-50 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
