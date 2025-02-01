@@ -9,80 +9,51 @@ const Hero = () => {
       style={{
         position: "relative",
         width: "100%",
-        height: "100%",
-        minHeight: "100%",
-        backgroundImage: "url('/assets/bg-img1.svg')",
+        height: "100vh",
+        backgroundImage: "url('/assets/GridBg.svg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        color: "white",
       }}
     >
-      {/* Grid Overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          display: "grid",
-          gridTemplateColumns: "repeat(6, 1fr)",
-          pointerEvents: "none", // Makes it non-interactive
-        }}
-      >
-        {Array.from({ length: 6 }).map((_, index) => (
-          <div
-            key={index}
-            style={{
-              backgroundColor: "rgba(255, 255, 255, 0.8)",
-              opacity: 0.1,
-              width: "1px",
-              height: "100%",
-              margin: "0 auto",
-            }}
-          />
-        ))}
+      {/* Status Banner */}
+      <div className="px-4 py-2 transform -translate-x-1/2 flex items-center gap-3 rounded-full border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)]">
+        <span className="animate-glow h-2.5 w-2.5 rounded-full bg-green-600"></span>
+        <p className="font-inter text-white text-sm md:text-base lg:text-lg">
+          We are currently taking projects
+        </p>
       </div>
-      
-      {/* Content */}
-      <div className="flex flex-col mt-[121px] ml-[173px]    h-[486px] w-[1121px] " >
-        <div className="mb-[60px]">
-        <span className="text-[28px] font-inter font-semibold text-white" > The Engineerians </span>
-        </div>
-        <div className="flex flex-row justify-between mb-[39px] ">
-          <div className=" text-white w-[618px] h-auto text-[95px] font-sequel leading-[1.2] " >
-            <p> Dream big, <br />We’ll<span className="text-[#EC4E39]"> engineer</span><br /> the rest. </p>
-          </div>
-          <div className="text-end w-[326px]" >
-            <p className="font-inter text-[20px] mt-5 text-[#FFFFFF] leading-[1.6] " >
-              At Engineerians, we’re more than just a team of professionals
-              <br />
-              <br />
-              we’re visionaries, problem-solvers, and creators.
-              <br />
-              <br />
-              With a passion for innovation, we craft solutions that inspire,
-              empower, and redefine what’s achievable.
-            </p>
-          </div>
-        </div>
-        
-        <div className="  flex h-[38px] w-[366px] items-center gap-[12px] rounded-full border-t-[1px] border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)] p-[6px_20px] opacity-100">
-            <span className="animate-glow h-[10px] w-[10px] rounded-full bg-green-600"></span>
-            <p className="font-inter text-xl text-white">
-              We are currently taking projects
-            </p>
-          </div>
-      </div>
-     
-      <div  className="mt-[100px]">
+
+      {/* Hero Text */}
+      <h1 className="font-sequel font-normal text-5xl mt-4">
+        <span className="text-white">Dream big,</span>
+        <br />
+        <span className="text-white/20">Well engineer</span>{" "}
+        <span className="text-white/20">the rest.</span>
+      </h1>
+
+      {/* Email Button */}
+      <button className="mt-6 px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-300 transition">
+        Email us
+      </button>
+
+      {/* Description */}
+      <p className="mt-4 text-white/60 text-sm max-w-xl">
+        At Engineerians, we're more than just a team of professionals,
+        we're visionaries,problem-solvers,and creators
+      </p>
+
+      {/* Infinite Scroll Section */}
+      <div className="absolute bottom-10 w-full">
         <InfiniteScroll />
-        </div>
+      </div>
     </div>
   );
 };
 
 export default Hero;
-
-
-
- 

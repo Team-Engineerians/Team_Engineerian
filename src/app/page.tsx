@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-[#101010]">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#000]">
         <Hero />
         {/* <InfiniteScroll /> */}
         <About/>
