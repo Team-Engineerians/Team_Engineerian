@@ -21,25 +21,25 @@ const About = () => {
           ].map((item, index) => (
             <div 
               key={index} 
-              className="relative flex flex-col gap-4 items-center justify-center w-full sm:w-[350px] lg:w-[350px] h-[300px] rounded-xl border-2 border-opacity-10 border-white group overflow-hidden flex-shrink-0 text-white transition-colors duration-500"
+              className="relative flex flex-col gap-4 items-center justify-center w-full sm:w-[350px] lg:w-[350px] h-[300px] rounded-xl border-2 border-opacity-10 border-white group overflow-hidden flex-shrink-0 text-white transition-colors duration-300"
             >
               {/* Background Hover Effect */}
-              <div className="absolute inset-0 transition-all duration-500 group-hover:bg-[radial-gradient(at_50%_55%,_rgba(188,197,206,1)_0%,_rgba(84,88,92,1)_100%)]"></div>
+              <div className="absolute inset-0 transition-all duration-300 group-hover:bg-[radial-gradient(at_50%_55%,_rgba(188,197,206,1)_0%,_rgba(84,88,92,1)_100%)]"></div>
 
               {/* Grid Overlay */}
-              <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 opacity-10 transition-opacity duration-500 group-hover:opacity-50">
+              <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 opacity-10 transition-opacity duration-300 group-hover:opacity-50">
                 {Array.from({ length: 16 }).map((_, i) => (
                   <div key={i} className="border border-white border-opacity-10"></div>
                 ))}
               </div>
 
               {/* Title */}
-              <h2 className="relative text-[22px] sm:text-[26px] w-full max-w-[200px] text-white text-opacity-50 font-bold transition-colors duration-500 group-hover:text-black group-hover:text-opacity-100">
+              <h2 className="relative text-[22px] sm:text-[26px] w-full max-w-[200px] text-white text-opacity-50 font-bold transition-colors duration-300 group-hover:text-black group-hover:text-opacity-100">
                 {item.title}
               </h2>
 
               {/* Paragraph */}
-              <p className="relative w-[80%] sm:w-[207px] text-white transition-colors duration-500 group-hover:text-black text-center">
+              <p className="relative w-[80%] sm:w-[207px] text-white transition-colors duration-300 group-hover:text-black text-center">
                 {item.text}
               </p>
             </div>
