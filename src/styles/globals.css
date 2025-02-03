@@ -35,6 +35,18 @@
     font-weight: 400;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Rocky Billy';
+    src: url('/fonts/Rockybilly.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Rustic Roadway';
+    src: url('/fonts/Rustic-Roadway.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
   @layer base {
   :root {
         --background: 0 0% 100%;
@@ -62,6 +74,11 @@
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+        --color-1: 0 100% 63%;
+        --color-2: 270 100% 63%;
+        --color-3: 210 100% 63%;
+        --color-4: 195 100% 63%;
+        --color-5: 90 100% 63%;
     }
   .dark {
         --background: 222.2 84% 4.9%;
@@ -88,6 +105,11 @@
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+        --color-1: 0 100% 63%;
+        --color-2: 270 100% 63%;
+        --color-3: 210 100% 63%;
+        --color-4: 195 100% 63%;
+        --color-5: 90 100% 63%;
     }
 }
   @layer base {

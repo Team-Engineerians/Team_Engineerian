@@ -3,6 +3,15 @@
 import React, { useState } from "react";
 import InfiniteScroll from "./InfiniteScroll";
 import { motion } from "framer-motion";
+import { FlipWords } from "./ui/flip-words";
+
+const words = [
+  "Achieve", "Build", "Create", "Design", "Engineer", 
+  "Forge", "Grow", "Handle", "Innovate", "Juggle", 
+  "Kickstart", "Lead", "Modify", "Nurture", "Optimize", 
+  "Plan", "Quantify", "Refine", "Structure", "Tailor", 
+  "Upgrade", "Vision", "Weave", "Execute", "Yield", "Zone"
+];
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -23,23 +32,23 @@ const Hero = () => {
         position: "relative",
         width: "100%",
         height: "100%",
-        backgroundImage: "url('/assets/GridBg1.svg')",
+        backgroundImage: "url('/assets/GridBg.svg')",
         backgroundSize: "cover",
       }}
     >
       {/* Main Content Centering */}
-      <div className="py-24 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12">
+      <div className="py-20 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12">
 
         {/* Status Banner */}
         <div className="flex items-center gap-3 rounded-full border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)] px-4 py-2">
           <span className="h-2.5 w-2.5 animate-glow rounded-full bg-green-600"></span>
           <p className="font-inter text-xs text-white sm:text-sm md:text-base lg:text-lg">
-            We are currently taking projects
+          Open to new collaborations
           </p>
         </div>
 
         {/* Hero Text */}
-        <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-7xl text-center mt-4">
+        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center mt-4">
           Dream big,
         </h1>
 
@@ -57,12 +66,12 @@ const Hero = () => {
 
         {/* Subheading with Glow */}
         <h1
-          className="text-center mt-4 font-bold font-sequel text-white/20 text-2xl sm:text-4xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/30"
+          className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
           onMouseMove={(e) => handleMouseMove(e, setHoveredText1)}
           onMouseEnter={() => setHoveredText1(true)}
           onMouseLeave={() => setHoveredText1(false)}
         >
-          We&apos;ll engineer
+          We&apos;ll <FlipWords words={words} />
           <br />
           the rest.
         </h1>
@@ -73,14 +82,15 @@ const Hero = () => {
         </button>
 
         {/* Description */}
-        <p className="mt-6 sm:mt-8 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed">
+        <p className="mt-6 sm:mt-8 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed hover:text-white hover:text-shadow-[0px_0px_30px_#fdec6e] transition-all duration-200 ease-in">
           At Engineerians, we&apos;re more than just a team of professionals,
-          <br />
+        <br />
           we&apos;re visionaries, problem-solvers, and creators.
         </p>
 
+
         {/* Large Text Animation with Glow */}
-        <div className="mt-24 sm:mt-44 flex items-center justify-center bg-transparent relative">
+        <div className="mt-16 sm:mt-44 flex items-center justify-center bg-transparent relative">
           {/* Main Text with Hover Detection */}
           <div
             className="text-center relative transition-all duration-300"
@@ -96,7 +106,7 @@ const Hero = () => {
       </div>
 
       {/* Infinite Scroll Section */}
-      <div className="flex w-full justify-center mt-10 sm:mt-16 text-white">
+      <div className="flex w-full justify-center mt-0 sm:mt-0 mb-10 sm:mb-0 text-white">
         <InfiniteScroll />
       </div>
     </div>
