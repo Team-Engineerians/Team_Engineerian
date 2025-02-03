@@ -23,7 +23,7 @@ const Hero = () => {
         position: "relative",
         width: "100%",
         height: "100%",
-        backgroundImage: "url('/assets/GridBg1.svg')",
+        backgroundImage: "url('/assets/GridBg.svg')",
         backgroundSize: "cover",
       }}
     >
