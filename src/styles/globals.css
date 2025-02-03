@@ -35,6 +35,18 @@
     font-weight: 400;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Rocky Billy';
+    src: url('/fonts/Rockybilly.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Rustic Roadway';
+    src: url('/fonts/Rustic-Roadway.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
   @layer base {
   :root {
         --background: 0 0% 100%;

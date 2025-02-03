@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import InfiniteScroll from "./InfiniteScroll";
 import { motion } from "framer-motion";
+import { FlipWords } from "./ui/flip-words";
+
+const words = ["engineer", "craft", "construct", "amplify"];
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -62,7 +65,7 @@ const Hero = () => {
           onMouseEnter={() => setHoveredText1(true)}
           onMouseLeave={() => setHoveredText1(false)}
         >
-          We&apos;ll engineer
+          We&apos;ll <FlipWords words={words} />
           <br />
           the rest.
         </h1>

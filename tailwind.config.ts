@@ -23,6 +23,14 @@ const config = {
   			seoulnamsan: [
   				'Seoul Namsan',
   				'sans-serif'
+  			],
+  			rockybilly: [
+  				'Rocky Billy',
+  				'sans-serif'
+  			],
+  			rustic: [
+  				'Rustic Roadway',
+  				'sans-serif'
   			]
   		},
   		keyframes: {
@@ -93,7 +101,7 @@ const config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [import("tailwindcss-animate")],
 };
 
 export default config;
