@@ -23,7 +23,7 @@ export default function LoadingScreen() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center z-50"
+      className="fixed top-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center px-4 text-center z-50"
       initial={{ opacity: 1 }}
       animate={{ opacity: fadeOut ? 0 : 1 }}
       transition={{ duration: 1, ease: "easeInOut" }} // Smooth fade-out before redirect
@@ -32,7 +32,7 @@ export default function LoadingScreen() {
         {!showWelcome ? (
           <motion.h1
             key="ready"
-            className="text-5xl font-bold text-white"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white whitespace-nowrap"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.2 }}
@@ -43,7 +43,7 @@ export default function LoadingScreen() {
         ) : (
           <motion.h1
             key="welcome"
-            className="text-5xl font-bold bg-gradient-to-r from-[#001217] via-[#002E36] to-[#004954] bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#001217] via-[#002E36] to-[#004954] bg-clip-text text-transparent whitespace-nowrap"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.2 }}
