@@ -9,6 +9,7 @@ const config = {
       fontFamily: {
         sequel: ["Sequel", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        oswald: ['Oswald', 'serif'],
       },
       keyframes: {
         scroll: {
