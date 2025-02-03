@@ -19,8 +19,8 @@ export default async function Home() {
         <Hero />
         {/* <InfiniteScroll /> */}
         <About />
-        <Buildeverything />
         <ServicesGrid/>
+        <Buildeverything />
         <OurWork />
       </main>
     </HydrateClient>

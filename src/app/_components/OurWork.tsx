@@ -9,42 +9,37 @@ export function OurWork() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-sequel text-center text-[64px] text-white">
+    <div className="relative min-h-screen w-full px-4 py-5 md:py-10 mt-10 sm:mt-16 md:mt-32">
+      <h2 className="mx-auto max-w-7xl text-center font-sequel text-2xl text-white sm:text-4xl md:text-5xl lg:text-[64px]">
         We&apos;ve Built
       </h2>
-      <Carousel items={cards} />
+      <div className="mx-auto max-w-7xl">
+        <Carousel items={cards} />
+      </div>
     </div>
   );
 }
 
 const DummyContent = () => {
   return (
-    <>
-      {Array.from({ length: 3 }, (_, index) => (
-        <div
-          key={"dummy-content" + index}
-          className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-        >
-          <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-            <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              The first rule of Apple club is that you boast about Apple club.
-            </span>{" "}
-            Keep a journal, quickly jot down a grocery list, and take amazing
-            class notes. Want to convert those notes to text? No problem.
-            Langotiya jeetu ka mara hua yaar is ready to capture every
-            thought.
-          </p>
-          <Image
-            src="https://images.unsplash.com/photo-1614850523054-021550d516cb?w=500&h=500&auto=format&fit=crop&q=80"
-            alt="Macbook mockup from Aceternity UI"
-            height="500"
-            width="500"
-            className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-          />
-        </div>
-      ))}
-    </>
+    <div className="rounded-2xl bg-[#F5F5F7] p-4 sm:p-5 md:p-6 lg:p-8 dark:bg-neutral-800">
+      <p className="mx-auto max-w-3xl font-sans text-xs text-neutral-600 sm:text-sm md:text-lg lg:text-xl dark:text-neutral-400">
+        <span className="font-bold text-neutral-700 dark:text-neutral-200">
+          The first rule of Apple club is that you boast about Apple club.
+        </span>{" "}
+        Keep a journal, quickly jot down a grocery list, and take amazing class
+        notes. Want to convert those notes to text? No problem.
+      </p>
+      <div className="flex justify-center">
+        <Image
+          src="https://images.unsplash.com/photo-1614850523054-021550d516cb?w=500&h=500&auto=format&fit=crop&q=80"
+          alt="Macbook mockup"
+          height={300}
+          width={300}
+          className="h-auto w-full object-contain sm:w-[300px]"
+        />
+      </div>
+    </div>
   );
 };
 

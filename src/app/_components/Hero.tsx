@@ -62,7 +62,7 @@ const Hero = () => {
           onMouseEnter={() => setHoveredText1(true)}
           onMouseLeave={() => setHoveredText1(false)}
         >
-          We'll engineer
+          We&apos;ll engineer
           <br />
           the rest.
         </h1>
@@ -96,7 +96,7 @@ const Hero = () => {
       </div>
 
       {/* Infinite Scroll Section */}
-      <div className="flex w-full justify-center mt-10 sm:mt-16">
+      <div className="flex w-full justify-center mt-10 sm:mt-16 text-white">
         <InfiniteScroll />
       </div>
     </div>
