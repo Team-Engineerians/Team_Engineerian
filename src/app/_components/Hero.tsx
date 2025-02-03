@@ -57,7 +57,7 @@ const Hero = () => {
 
         {/* Subheading with Glow */}
         <h1
-          className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/30"
+          className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
           onMouseMove={(e) => handleMouseMove(e, setHoveredText1)}
           onMouseEnter={() => setHoveredText1(true)}
           onMouseLeave={() => setHoveredText1(false)}
@@ -73,11 +73,12 @@ const Hero = () => {
         </button>
 
         {/* Description */}
-        <p className="mt-6 sm:mt-8 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed">
+        <p className="mt-6 sm:mt-8 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed hover:text-white hover:text-shadow-[0px_0px_30px_#fdec6e] transition-all duration-200 ease-in">
           At Engineerians, we&apos;re more than just a team of professionals,
-          <br />
+        <br />
           we&apos;re visionaries, problem-solvers, and creators.
         </p>
+
 
         {/* Large Text Animation with Glow */}
         <div className="mt-16 sm:mt-44 flex items-center justify-center bg-transparent relative">
