@@ -9,7 +9,7 @@ const About = () => {
         {/* Heading */}
         <div className="flex flex-col">
           <h1 className="text-[40px] sm:text-[55px]">What we do</h1>
-          <h1 className="font-rustic text-[40px] sm:text-[55px] opacity-50"><ColourfulText text="inspires confidence" /></h1>
+          <h1 className="font-rustic opacity-50"><ColourfulText text="inspires confidence" /></h1>
         </div>
 
         {/* Card Container - Always in Row */}

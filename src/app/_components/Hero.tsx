@@ -5,7 +5,13 @@ import InfiniteScroll from "./InfiniteScroll";
 import { motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
 
-const words = ["engineer", "craft", "construct", "amplify"];
+const words = [
+  "Achieve", "Build", "Create", "Design", "Engineer", 
+  "Forge", "Grow", "Handle", "Innovate", "Juggle", 
+  "Kickstart", "Lead", "Modify", "Nurture", "Optimize", 
+  "Plan", "Quantify", "Refine", "Structure", "Tailor", 
+  "Upgrade", "Vision", "Weave", "Execute", "Yield", "Zone"
+];
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -37,7 +43,7 @@ const Hero = () => {
         <div className="flex items-center gap-3 rounded-full border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)] px-4 py-2">
           <span className="h-2.5 w-2.5 animate-glow rounded-full bg-green-600"></span>
           <p className="font-inter text-xs text-white sm:text-sm md:text-base lg:text-lg">
-            We are currently taking projects
+          Open to new collaborations
           </p>
         </div>
 
