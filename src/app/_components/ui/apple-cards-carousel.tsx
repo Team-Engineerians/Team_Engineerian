@@ -104,20 +104,18 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
         {/* Scroll Buttons */}
         {/* Scroll Buttons - Hidden on Small Screens */}
-        <div className="absolute inset-y-0 left-2 hidden items-center md:flex">
+        <div className="hidden md:flex justify-end space-x-4 mt-6">
           <button
             onClick={() => scroll("left")}
             disabled={!canScrollLeft}
-            className="rounded-full bg-gray-200 p-2 shadow-md"
+            className="rounded-full bg-gray-200 p-3 shadow-md"
           >
             <IconArrowNarrowLeft className="h-6 w-6 text-gray-700" />
           </button>
-        </div>
-        <div className="absolute inset-y-0 right-2 hidden items-center md:flex">
           <button
             onClick={() => scroll("right")}
             disabled={!canScrollRight}
-            className="rounded-full bg-gray-200 p-2 shadow-md"
+            className="rounded-full bg-gray-200 p-3 shadow-md"
           >
             <IconArrowNarrowRight className="h-6 w-6 text-gray-700" />
           </button>
