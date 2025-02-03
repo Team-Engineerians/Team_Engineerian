@@ -1,10 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef } from "react";
 import InfiniteScroll from "./InfiniteScroll";
-import { motion } from "framer-motion";
 
-const Hero = () => {
+export default function Hero() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const textRef = useRef<HTMLSpanElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (textRef.current) {
+      const { left, top } = textRef.current.getBoundingClientRect();
+      const x = e.clientX - left;
+      const y = e.clientY - top;
+      setMousePos({ x, y });
+    }
+  };
+
   return (
     <div
       style={{
@@ -17,7 +28,6 @@ const Hero = () => {
     >
       {/* Main Content Centering */}
       <div className="py-24 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12">
-
         {/* Hero Text */}
         <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-7xl text-center">
           Dream big,
@@ -50,10 +60,20 @@ const Hero = () => {
           we&apos;re visionaries, problem-solvers, and creators.
         </p>
 
-        {/* Large Text Animation */}
-        <div className="mt-24 sm:mt-44 flex items-center justify-center bg-transparent">
+        {/* Large Text Animation with Cursor Glow */}
+        <div
+          className="mt-24 sm:mt-44 flex items-center justify-center bg-transparent group"
+          onMouseMove={handleMouseMove}
+        >
           <div className="text-center">
-            <span className="font-sequel text-5xl sm:text-6xl md:text-[7rem] text-black drop-shadow-[30px_30px_100px_rgba(255,255,255,0.8)]">
+            <span
+              ref={textRef}
+              className="font-sequel text-5xl sm:text-6xl md:text-[7rem] text-black relative glow-mask"
+              style={{
+                "--x": `${mousePos.x}px`,
+                "--y": `${mousePos.y}px`,
+              } as React.CSSProperties}
+            >
               THE ENGX LAB.
             </span>
           </div>
@@ -66,6 +86,4 @@ const Hero = () => {
       </div>
     </div>
   );
-};
-
-export default Hero;
+}
