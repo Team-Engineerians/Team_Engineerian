@@ -3,8 +3,8 @@ import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "./Navbar";
-import Loader from "./loading";
-import { Suspense } from "react";
+import LoaderWrapper from "./_components/LoaderWrapper";
+import PageWrapper from "./_components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -12,18 +12,16 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en">
       <body>
-        <Navbar />
-        <Suspense fallback={<Loader />}>
+        <LoaderWrapper>
           <TRPCReactProvider>
-            {children}
+            <Navbar />
+            <PageWrapper>{children}</PageWrapper> {/* Smooth transitions */}
           </TRPCReactProvider>
-        </Suspense>
+        </LoaderWrapper>
       </body>
     </html>
   );
