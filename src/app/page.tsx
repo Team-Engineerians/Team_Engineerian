@@ -7,7 +7,7 @@ import About from './_components/About';
 import Buildeverything from './_components/Buildeverything'
 import ServicesGrid from './_components/Service';
 import { OurWork } from './_components/OurWork';
-
+import Testimonials from './_components/Testimonials';
 export default async function Home() {
   // const hello = await api.post.hello({ text: "from tRPC" });
 
@@ -21,7 +21,9 @@ export default async function Home() {
         <About />
         <ServicesGrid/>
         <Buildeverything />
+        <Testimonials />
         <OurWork />
+
       </main>
     </HydrateClient>
   );
