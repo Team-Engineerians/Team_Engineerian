@@ -16,41 +16,44 @@ const Hero = () => {
       }}
     >
       {/* Main Content Centering */}
-      <div className="py-48 flex flex-col items-center">
-        
+      <div className="py-24 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12">
+
         {/* Hero Text */}
-        <h1 className="mt-6 text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="text-white">Dream big,</span>
+        <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-7xl text-center">
+          Dream big,
+        </h1>
+
+        {/* Subheading */}
+        <h1 className="text-center mt-6 font-bold font-sequel text-white/20 text-2xl sm:text-4xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2]">
+          We'll engineer
           <br />
-          <span className="text-white/60">Well engineer</span>
-          {"  "}
-          <br />
-          <span className="text-white/60">the rest.</span>
+          the rest.
         </h1>
 
         {/* Email Button */}
-        <button className="mt-8 rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-300">
+        <button className="mt-8 sm:mt-12 rounded-full text-white hover:text-black font-medium border border-white px-6 sm:px-9 py-2 hover:bg-white transition-all shadow-none hover:shadow-[0_0_110px_10px_rgba(255,255,255,0.8)] text-sm sm:text-base">
           Email us
         </button>
 
         {/* Status Banner */}
-        <div className="flex items-center gap-3 rounded-full border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)] px-4 py-2">
-          <span className="h-2.5 w-2.5 animate-glow rounded-full bg-green-600"></span>
-          <p className="font-inter text-xs text-white sm:text-sm md:text-base lg:text-lg">
+        <div className="flex items-center gap-2 sm:gap-3 mt-6 sm:mt-10">
+          <span className="h-2 w-2 sm:h-2.5 sm:w-2.5 animate-glow rounded-full bg-green-600"></span>
+          <p className="text-white text-xs sm:text-[14px]">
             We are currently taking projects
           </p>
         </div>
 
         {/* Description */}
-        <p className="mt-6 max-w-xl text-center text-xs text-white/60 sm:text-sm md:text-base">
+        <p className="mt-6 sm:mt-8 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed">
           At Engineerians, we&apos;re more than just a team of professionals,
+          <br />
           we&apos;re visionaries, problem-solvers, and creators.
         </p>
 
-        {/* New Div with animation and hover effect */}
-        <div className="mt-64 flex items-center justify-center bg-black">
+        {/* Large Text Animation */}
+        <div className="mt-24 sm:mt-44 flex items-center justify-center bg-transparent">
           <div className="text-center">
-            <span className="font-sequel text-[7rem] text-black drop-shadow-[50px_50px_150px_rgba(255,255,255,0.8)]">
+            <span className="font-sequel text-5xl sm:text-6xl md:text-[7rem] text-black drop-shadow-[30px_30px_100px_rgba(255,255,255,0.8)]">
               THE ENGX LAB.
             </span>
           </div>
@@ -58,7 +61,7 @@ const Hero = () => {
       </div>
 
       {/* Infinite Scroll Section */}
-      <div className="absolute bottom-10 flex w-full justify-center">
+      <div className="flex w-full justify-center mt-10 sm:mt-16">
         <InfiniteScroll />
       </div>
     </div>
