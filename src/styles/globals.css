@@ -23,3 +23,9 @@
   -webkit-text-fill-color: transparent;
   transition: background 0.1s ease-out;
 }
+  @font-face {
+    font-family: 'Oswald';
+    src: url('/fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
