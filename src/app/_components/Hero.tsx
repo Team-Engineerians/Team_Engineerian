@@ -28,7 +28,7 @@ const Hero = () => {
       }}
     >
       {/* Main Content Centering */}
-      <div className="py-24 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12">
+      <div className="py-20 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12">
 
         {/* Status Banner */}
         <div className="flex items-center gap-3 rounded-full border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)] px-4 py-2">
@@ -80,7 +80,7 @@ const Hero = () => {
         </p>
 
         {/* Large Text Animation with Glow */}
-        <div className="mt-24 sm:mt-44 flex items-center justify-center bg-transparent relative">
+        <div className="mt-16 sm:mt-44 flex items-center justify-center bg-transparent relative">
           {/* Main Text with Hover Detection */}
           <div
             className="text-center relative transition-all duration-300"
@@ -96,7 +96,7 @@ const Hero = () => {
       </div>
 
       {/* Infinite Scroll Section */}
-      <div className="flex w-full justify-center mt-10 sm:mt-16 text-white">
+      <div className="flex w-full justify-center mt-0 sm:mt-0 mb-10 sm:mb-0 text-white">
         <InfiniteScroll />
       </div>
     </div>
