@@ -8,9 +8,9 @@ const everythingSection = () => {
       {/* Inner Circle */}
       <div className="absolute w-[483px] h-[483px] flex-shrink-0 border border-white opacity-20 rounded-full"></div>
       
-      <div className="text-center w-[787.442px] text-[rgba(255,255,255,0.20)] font-oswald text-[144px] font-semibold leading-[100%] uppercase">
-        <p className="text-sm text-gray-300">ENGX LAB.</p>
-        <h1 className="font-oswald font-normal text-[rgba(255,255,255,0.20)]">WE BUILD <br /> EVERYTHING</h1>
+      <div className="text-center">
+        <p className="font-seoulnamsan text-[28px] relative -top-12 text-gray-300">ENGX LAB.</p>
+        <h1 className="text-center font-oswald font-normal text-[144px] leading-[100%] uppercase text-[rgba(255,255,255,0.20)]">WE BUILD <br /> EVERYTHING</h1>
       </div>
     </div>
   );
