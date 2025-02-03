@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import InfiniteScroll from "./InfiniteScroll";
 import { motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
+import { SparklesPreview } from "./SparkelsUi";
 
 const words = [
   "Achieve", "Build", "Create", "Design", "Engineer", 
@@ -90,23 +91,19 @@ const Hero = () => {
 
 
         {/* Large Text Animation with Glow */}
-        <div className="mt-16 sm:mt-44 flex items-center justify-center bg-transparent relative">
+        <div className="mt-16 sm:mt-44 flex flex-col items-center justify-center bg-transparent relative">
           {/* Main Text with Hover Detection */}
-          <div
-            className="text-center relative transition-all duration-300"
-            onMouseMove={(e) => handleMouseMove(e, setHoveredText2)}
-            onMouseEnter={() => setHoveredText2(true)}
-            onMouseLeave={() => setHoveredText2(false)}
-          >
-            <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-black duration-500 hover:text-white/60 drop-shadow-[30px_30px_100px_rgba(255,255,255,0.8)]">
+          <div className="text-center relative transition-all duration-300">
+            <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-white/60 duration-500 hover:text-white">
               THE ENGX LAB.
             </span>
           </div>
+          <SparklesPreview />
         </div>
       </div>
 
       {/* Infinite Scroll Section */}
-      <div className="flex w-full justify-center mt-0 sm:mt-0 mb-10 sm:mb-0 text-white">
+      <div className="flex w-full justify-center mt-0 sm:mt-0 mb-12 sm:mb-24 text-white">
         <InfiniteScroll />
       </div>
     </div>
