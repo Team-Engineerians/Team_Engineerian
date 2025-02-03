@@ -1,5 +1,6 @@
 import React from 'react'
 import ColourfulText from "./ui/colourful-text";
+import { LampDemo } from './ui/lamp';
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
         
         {/* Heading */}
         <div className="flex flex-col">
-          <h1 className="text-[40px] sm:text-[55px]">What we do</h1>
+          <LampDemo />
           <h1 className="font-rustic opacity-50"><ColourfulText text="inspires confidence" /></h1>
         </div>
 

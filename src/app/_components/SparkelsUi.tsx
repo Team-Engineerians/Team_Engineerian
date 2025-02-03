@@ -4,7 +4,7 @@ import { SparklesCore } from "./ui/sparkles";
 
 export function SparklesPreview() {
   return (
-    <div className="sm:w-full bg-transprent  flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <div className="w-screen bg-transprent  flex flex-col items-center justify-center overflow-hidden rounded-md">
       {/* <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
       THE ENGX LAB.
       </h1> */}
