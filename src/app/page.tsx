@@ -7,6 +7,7 @@ import Buildeverything from './_components/Buildeverything'
 import ServicesGrid from './_components/Service';
 import { OurWork } from './_components/OurWork';
 import Testimonials from './_components/Testimonials';
+import ReachUs from './_components/ReachUs';
 export default async function Home() {
 
   void api.post.getLatest.prefetch();
@@ -20,6 +21,7 @@ export default async function Home() {
         <Buildeverything />
         <Testimonials />
         <OurWork />
+        <ReachUs/>
 
       </main>
     </HydrateClient>
