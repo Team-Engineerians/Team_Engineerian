@@ -104,11 +104,11 @@ const Hero = () => {
           <div className="mt-18 sm:mt-48 flex flex-col items-center justify-center bg-transparent relative">
             {/* Main Text with Hover Detection */}
             <div className="text-center relative transition-all duration-300">
-              <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-white/60 duration-500 hover:text-white">
+              <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-black duration-500 hover:text-white/60 drop-shadow-[30px_30px_100px_rgba(255,255,255,0.8)]">
                 THE ENGX LAB.
               </span>
             </div>
-            <SparklesPreview />
+            {/* <SparklesPreview /> */}
           </div>
         </div>
 

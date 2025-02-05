@@ -32,14 +32,14 @@ const Navbar: React.FC = () => {
     >
       <div className="flex items-center justify-center">
         {/* Desktop Navbar */}
-        <div className="hidden md:flex items-center space-x-4 bg-[#525252] bg-opacity-65 text-white rounded-full shadow-lg">
-          <button className="hover:bg-white hover:bg-opacity-15 px-4 py-2 rounded-full">
+        <div className="hidden md:flex items-center space-x-4 bg-[#525252] bg-opacity-55 text-white rounded-full shadow-lg">
+          <button className="hover:bg-[#525252] bg-opacity-70 px-4 py-2 rounded-full">
             Our Work
           </button>
-          <button className="hover:bg-white hover:bg-opacity-15 px-4 py-2 rounded-full">
+          <button className="hover:bg-[#525252] bg-opacity-70 px-4 py-2 rounded-full">
             Services
           </button>
-          <button className="hover:bg-white hover:bg-opacity-25 px-4 py-2 rounded-full">
+          <button className="hover:bg-[#525252] bg-opacity-70 px-4 py-2 rounded-full">
             Contact
           </button>
         </div>
