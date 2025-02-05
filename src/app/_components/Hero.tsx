@@ -48,7 +48,7 @@ const Hero = () => {
         {/* Main Content Centering */}
         <div className="py-20 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12 relative z-10">
           {/* Status Banner */}
-          <div className="flex items-center gap-3 rounded-full border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.07)] px-4 py-2">
+          <div className="flex items-center gap-3">
             <span className="h-2.5 w-2.5 animate-glow rounded-full bg-green-600"></span>
             <p className="font-inter text-xs text-white sm:text-sm md:text-base lg:text-lg">
               Open to new collaborations
@@ -63,7 +63,7 @@ const Hero = () => {
           {/* Cursor Glow Effect */}
           {(hoveredText1 || hoveredText2) && (
             <motion.div
-              className="absolute w-[100px] h-[100px] bg-white opacity-100 blur-2xl pointer-events-none"
+              className="absolute w-[100px] h-[100px] bg-white opacity-100 blur-2xl pointer-events-none z-10"
               animate={{
                 top: mousePosition.y - 150,
                 left: mousePosition.x - 150,
@@ -94,14 +94,14 @@ const Hero = () => {
           </button>
 
           {/* Description */}
-          <p className="mt-6 sm:mt-8 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed hover:text-white hover:text-shadow-[0px_0px_30px_#fdec6e] transition-all duration-200 ease-in">
+          <p className="mt-6 sm:mt-12 text-center text-xs text-white/60 sm:text-sm md:text-xl lg:text-[22px] leading-relaxed hover:text-white hover:text-shadow-[0px_0px_30px_#fdec6e] transition-all duration-200 ease-in">
             At Engineerians, we&apos;re more than just a team of professionals,
             <br />
             we&apos;re visionaries, problem-solvers, and creators.
           </p>
 
           {/* Large Text Animation with Glow */}
-          <div className="mt-16 sm:mt-44 flex flex-col items-center justify-center bg-transparent relative">
+          <div className="mt-18 sm:mt-48 flex flex-col items-center justify-center bg-transparent relative">
             {/* Main Text with Hover Detection */}
             <div className="text-center relative transition-all duration-300">
               <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-white/60 duration-500 hover:text-white">
