@@ -26,20 +26,20 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`fixed top-5 sm:top-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 z-50 ${
+      className={`fixed top-5 sm:top-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 z-10 ${
         visible ? "opacity-100" : "opacity-0"
       } w-full max-w-7xl px-6`}
     >
       <div className="flex items-center justify-center">
         {/* Desktop Navbar */}
-        <div className="hidden md:flex items-center space-x-4 bg-[#3A3A3A] bg-opacity-10 border-2 border-opacity-20 border-white text-white py-2 px-6 rounded-full shadow-lg">
+        <div className="hidden md:flex items-center space-x-4 bg-stone-500 bg-opacity-70 text-white rounded-full shadow-lg">
           <button className="hover:bg-white hover:bg-opacity-15 px-4 py-2 rounded-full">
             Our Work
           </button>
           <button className="hover:bg-white hover:bg-opacity-15 px-4 py-2 rounded-full">
             Services
           </button>
-          <button className="hover:bg-white hover:bg-opacity-25 bg-white bg-opacity-15 px-4 py-2 rounded-full">
+          <button className="hover:bg-white hover:bg-opacity-25 px-4 py-2 rounded-full">
             Contact
           </button>
         </div>
