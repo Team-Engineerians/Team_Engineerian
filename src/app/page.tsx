@@ -8,8 +8,6 @@ import ServicesGrid from './_components/Service';
 import { OurWork } from './_components/OurWork';
 import Testimonials from './_components/Testimonials';
 import ReachUs from './_components/ReachUs';
-import Footer from './_components/footer';
-import ErrorPage from './_components/ErrorPage';
 
 export default async function Home() {
 
@@ -25,9 +23,6 @@ export default async function Home() {
         <Testimonials />
         <OurWork />
         <ReachUs />
-        <Footer />
-        <ErrorPage />
-
       </main>
     </HydrateClient>
   );

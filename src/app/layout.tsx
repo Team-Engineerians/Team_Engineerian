@@ -1,10 +1,10 @@
 import "~/styles/globals.css";
-import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "./Navbar";
 import LoaderWrapper from "./_components/LoaderWrapper";
 import PageWrapper from "./_components/PageWrapper";
+import Footer from "./Footer";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -20,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <TRPCReactProvider>
             <Navbar />
             <PageWrapper>{children}</PageWrapper> {/* Smooth transitions */}
+            <Footer />
           </TRPCReactProvider>
         </LoaderWrapper>
       </body>

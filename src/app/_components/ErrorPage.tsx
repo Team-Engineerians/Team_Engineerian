@@ -1,8 +1,6 @@
 import React from 'react';
 
-type Props = {};
-
-const ErrorPage = (props: Props) => {
+const ErrorPage = () => {
   return (
     <div className='flex flex-col items-center justify-center h-screen bg-black text-white text-center font-sans'>
       <div className='relative flex flex-col items-center justify-center'>
