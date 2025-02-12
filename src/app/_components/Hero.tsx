@@ -2,9 +2,7 @@
 
 import React, { useState } from "react";
 import InfiniteScroll from "./InfiniteScroll";
-import { motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
-import { SparklesPreview } from "./SparkelsUi";
 
 const words = [
   "Achieve", "Build", "Create", "Design", "Engineer", 
@@ -15,18 +13,7 @@ const words = [
 ];
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredText1, setHoveredText1] = useState(false);
-  const [hoveredText2, setHoveredText2] = useState(false);
   const [isButtonHovered, setIsButtonHovered] = useState(false);
-
-  const handleMouseMove = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    setHoveredState: React.Dispatch<React.SetStateAction<boolean>>
-  ) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-    setHoveredState(true);
-  };
 
   return (
     <div className="relative w-full h-full">
@@ -47,6 +34,7 @@ const Hero = () => {
       >
         {/* Main Content Centering */}
         <div className="py-20 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12 relative z-10">
+          
           {/* Status Banner */}
           <div className="flex items-center gap-3">
             <span className="h-2.5 w-2.5 animate-glow rounded-full bg-green-600"></span>
@@ -59,25 +47,10 @@ const Hero = () => {
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center mt-4">
             Dream big,
           </h1>
-
-          {/* Cursor Glow Effect */}
-          {(hoveredText1 || hoveredText2) && (
-            <motion.div
-              className="absolute w-[100px] h-[100px] bg-white opacity-100 blur-2xl pointer-events-none z-10"
-              animate={{
-                top: mousePosition.y - 150,
-                left: mousePosition.x - 150,
-              }}
-              transition={{ type: "tween", ease: "linear", duration: 0 }}
-            />
-          )}
-
+          
           {/* Subheading with Glow */}
           <h1
             className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
-            onMouseMove={(e) => handleMouseMove(e, setHoveredText1)}
-            onMouseEnter={() => setHoveredText1(true)}
-            onMouseLeave={() => setHoveredText1(false)}
           >
             We&apos;ll <FlipWords words={words} />
             <br />
