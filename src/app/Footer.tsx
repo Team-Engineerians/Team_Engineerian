@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Social Icons and Contact Info */}
-        <footer className="flex flex-col items-end">
+        <footer className="flex flex-col items-end text-gray-400">
           <div className="flex items-center space-x-4 mt-0">
           <a href="#" className=" ">
              <Image src="/icons/twitter.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
