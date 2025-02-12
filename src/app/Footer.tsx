@@ -31,22 +31,22 @@ const Footer = () => {
         <footer className="flex flex-col items-end text-gray-400">
           <div className="flex items-center space-x-4 mt-0">
           <a href="#" className=" ">
-             <Image src="/icons/twitter.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
+             <Image src="/Social_Icons/twitter.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
           </a>
           <a href="#" className="">
-             <Image src="/icons/telegram.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
+             <Image src="/Social_Icons/telegram.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
           </a>
           <a href="#" className="">
-             <Image src="/icons/instagram.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
+             <Image src="/Social_Icons/instagram.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
           </a>
           <a href="#" className="">
-             <Image src="/icons/youtube.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
+             <Image src="/Social_Icons/youtube.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
           </a>
           <a href="#" className="">
-             <Image src="/icons/pintrest.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
+             <Image src="/Social_Icons/pintrest.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
           </a>
           <a href="#" className="">
-             <Image src="/icons/linkedin.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
+             <Image src="/Social_Icons/linkedin.svg" height={24} width={24} alt="Facebook" className="hover:opacity-80 transition" />
           </a>
           </div>
           <p className="mt-6">ENGX, Bangalore, India.</p>
