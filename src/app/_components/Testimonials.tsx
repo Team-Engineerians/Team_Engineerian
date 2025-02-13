@@ -9,7 +9,7 @@ const TrustedByProfessionals: React.FC = () => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
         setScreenSize('mobile');
-      } else if (window.innerWidth >= 500 && window.innerWidth < 1024) {
+      } else if (window.innerWidth >= 500 && window.innerWidth < 1310) {
         setScreenSize('tablet');
       } else {
         setScreenSize('desktop');
@@ -22,7 +22,7 @@ const TrustedByProfessionals: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-4">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-black text-white px-4">
       {screenSize === 'desktop' && <DesktopView />}
       {screenSize === 'tablet' && <TabletView />}
       {screenSize === 'mobile' && <MobileView />}
@@ -35,7 +35,7 @@ const TrustedByProfessionals: React.FC = () => {
 
 // Desktop View (Web)
 const DesktopView: React.FC = () => (
-  <div className='flex flex-row gap-4'>
+  <div className='flex flex-row justify-center gap-4 w-[90vw]'>
     <div className='flex flex-col gap-4'>
       <div className='h-[223px] w-[199px] bg-white rounded-lg bg-cover bg-center' style={{ backgroundImage: `url(${img.src})` }}></div>
       <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center' style={{ backgroundImage: `url(${img.src})` }}></div>
