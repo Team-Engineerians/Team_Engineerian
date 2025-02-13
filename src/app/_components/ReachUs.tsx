@@ -67,7 +67,7 @@ const ReachUs = () => {
               Have an idea, a project, or just want to collaborate?
             </p>
             <p className="text-xl text-white/60">
-              We're here to turn possibilities into reality. Let's explore how we can engineer your vision into something extraordinary.
+             {" We're here to turn possibilities into reality. Let's explore how we can engineer your vision into something extraordinary."}
             </p>
           </div>
           <div className="w-auto sm:w-1/2 px-14 sm:px-2">
@@ -157,7 +157,7 @@ const ReachUs = () => {
                 type="submit"
                 className="w-full bg-white text-black p-2 rounded-md font-semibold hover:bg-gray-300 transition"
               >
-                Let's Talk
+                {" Let's Talk "}
               </button>
             </form>
           </div>
