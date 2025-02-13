@@ -55,26 +55,30 @@ const DesktopView: React.FC = () => (
 
 // Tablet View (iPad)
 const TabletView: React.FC = () => (
-  <div className='grid grid-cols-2 gap-4 scroll-smooth mb-44 overflow-y-auto h-[45vh] w-[80vw] place-items-center
+  <div className='grid grid-cols-2 gap-4 scroll-smooth mb-44 overflow-y-auto h-[75vh] w-[80vw] place-items-center
  snap-y snap-mandatory'>
-    <div className='h-[223px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[223px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
   </div>
 );
 
 // Mobile View (Phones)
 const MobileView: React.FC = () => (
-  <div className='grid grid-cols-1 gap-4 bg-red-300 mb-44 overflow-y-auto h-[75vh] w-[70vw] place-items-center snap-y snap-mandatory'>
-    <div className='h-[223px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[223px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[267px] w-[199px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+  <div className='grid grid-cols-1 gap-4  mb-44 overflow-y-auto h-[90vh] w-[90%] place-items-center snap-y snap-mandatory'>
+    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
   </div>
 );
 
