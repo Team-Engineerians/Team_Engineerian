@@ -28,7 +28,7 @@ const TrustedByProfessionals: React.FC = () => {
       {screenSize === 'mobile' && <MobileView />}
       
       {/* Title */}
-      <h2 className="text-[42px] sm:text-[64px] font-sequel text-center mt-[-50px] sm:mt-[-106px]">Trusted by Professionals</h2>
+      <h2 className="text-[42px] sm:text-[64px] font-sequel text-center mt-[-60px] sm:mt-[-106px]">Trusted by Professionals</h2>
     </div>
   );
 };
@@ -72,7 +72,7 @@ const TabletView: React.FC = () => (
 
 // Mobile View (Phones)
 const MobileView: React.FC = () => (
-  <div className='grid grid-cols-1 gap-4  mb-44 overflow-y-auto h-[90vh] w-[90%] place-items-center snap-y snap-mandatory'>
+  <div className='grid grid-cols-1 gap-4  mb-32 overflow-y-auto h-[90vh] w-[90%] place-items-center snap-y snap-mandatory'>
     <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
     <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
     <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>

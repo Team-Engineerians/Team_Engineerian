@@ -2,9 +2,9 @@ import React from "react";
 
 const ServicesGrid = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-black text-white px-4">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center mt-20 sm:mt-0 bg-black text-white px-4">
       {/* Title */}
-      <h1 className="text-[40px] sm:text-[64px] font-semibold mb-10 text-center">We Deliver</h1>
+      <h1 className="text-[45px] sm:text-[64px] font-semibold mb-10 text-center">We Deliver</h1>
 
       {/* Grid Layout */}
       <div className="flex flex-col justify-center w-full max-w-[1055px] gap-2 h-auto sm:h-[600px]">

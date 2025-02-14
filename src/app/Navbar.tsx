@@ -70,6 +70,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="z-50">
+          
           {/* Left half with transparent blur */}
           <div className="w-1/2 h-screen bg-black bg-opacity-40 backdrop-blur-md p-6 flex flex-col space-y-4 text-white">
             <button className="hover:bg-[#525252] bg-opacity-70 px-4 py-2 rounded-md">
@@ -82,9 +83,10 @@ const Navbar: React.FC = () => {
               Contact
             </button>
           </div>
+
           {/* Right half fully transparent */}
           <div
-            className="w-1/2 h-full"
+            className="w-1/2 h-screen"
             onClick={() => setMenuOpen(false)}
           ></div>
         </div>

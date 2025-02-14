@@ -33,12 +33,12 @@ const Hero = () => {
         }}
       >
         {/* Main Content Centering */}
-        <div className="py-20 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12 relative z-10">
+        <div className="py-16 sm:py-32 md:py-44 flex flex-col items-center px-6 sm:px-12 relative z-10">
           
           {/* Status Banner */}
           <div className="flex items-center gap-3">
             <span className="h-2.5 w-2.5 animate-glow rounded-full bg-green-600"></span>
-            <p className="font-inter text-xs text-white sm:text-sm md:text-base lg:text-lg">
+            <p className="font-inter text-sm text-white sm:text-sm md:text-base lg:text-lg">
               Open to new collaborations
             </p>
           </div>
@@ -49,9 +49,9 @@ const Hero = () => {
           </h1>
           
           {/* Subheading with Glow */}
-          <div className="w-[90%]">
+          <div className="w-[100%]">
             <h1
-              className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
+              className="text-center mt-4 font-bold font-sequel text-white/20 text-[36px] sm:text-5xl md:text-5xl lg:text-[110px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
               >
               We&apos;ll <FlipWords words={words} />
               <br />
@@ -76,10 +76,10 @@ const Hero = () => {
           </p>
 
           {/* Large Text Animation with Glow */}
-          <div className="mt-18 sm:mt-48 flex flex-col items-center justify-center bg-transparent relative">
+          <div className="mt-14 sm:mt-48 flex flex-col items-center justify-center bg-transparent relative">
             {/* Main Text with Hover Detection */}
             <div className="text-center relative transition-all duration-300">
-              <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-black duration-500 hover:text-white/60 drop-shadow-[30px_30px_100px_rgba(255,255,255,0.8)]">
+              <span className="font-sequel font-bold text-5xl sm:text-6xl md:text-[7rem] text-white/40 sm:text-black duration-500 sm:hover:text-white/60 drop-shadow-[30px_30px_100px_rgba(255,255,255,0.8)]">
                 THE ENGX LAB.
               </span>
             </div>
@@ -88,7 +88,7 @@ const Hero = () => {
         </div>
 
         {/* Infinite Scroll Section */}
-        <div className="flex w-full justify-center mt-0 sm:mt-0 mb-12 sm:mb-24 text-white">
+        <div className="flex w-full justify-center mb-20 sm:mb-24 text-white">
           <InfiniteScroll />
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const EverythingSection = () => {
   return (
-    <div className="relative flex items-center justify-center bg-black text-white h-auto sm:h-auto md:h-auto lg:h-screen my-44 sm:my-36 md:my-44 lg:my-32">
+    <div className="relative flex items-center justify-center bg-black text-white h-auto sm:h-auto md:h-auto lg:h-screen my-60 sm:my-36 md:my-44 lg:my-32">
 
       <div className="absolute h-[85vw] max-h-[765px] w-[85vw] max-w-[765px] rounded-full border border-white opacity-20"></div>
       {/* Inner Circle */}

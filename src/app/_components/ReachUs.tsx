@@ -62,7 +62,7 @@ const ReachUs = () => {
       <div className="py-48 justify-center items-center flex">
         <div className="gap-14 flex flex-col sm:flex-row justify-center items-center rounded-xl px-0 sm:px-14 lg:px-0 w-full max-w-4xl">
           <div className="w-auto sm:w-1/2 px-14 sm:px-0 py-20 pr-6 sm:pr-20">
-            <h2 className="text-4xl font-semibold text-white mb-4">Reach us out</h2>
+            <h2 className="text-4xl font-semibold text-white mb-6">Reach us out</h2>
             <p className="text-xl text-white/70 mb-6">
               Have an idea, a project, or just want to collaborate?
             </p>
