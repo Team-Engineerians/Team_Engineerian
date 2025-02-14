@@ -49,13 +49,15 @@ const Hero = () => {
           </h1>
           
           {/* Subheading with Glow */}
-          <h1
-            className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
-          >
-            We&apos;ll <FlipWords words={words} />
-            <br />
-            the rest.
-          </h1>
+          <div className="w-[90%]">
+            <h1
+              className="text-center mt-4 font-bold font-sequel text-white/20 text-5xl sm:text-5xl md:text-5xl lg:text-[115px] leading-tight sm:leading-[1.2] transition-all duration-300 hover:text-white/50 ease-in"
+              >
+              We&apos;ll <FlipWords words={words} />
+              <br />
+              the rest.
+            </h1>
+          </div>
 
           {/* Email Button with Hover Effect */}
           <button

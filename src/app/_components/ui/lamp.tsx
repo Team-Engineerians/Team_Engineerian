@@ -48,7 +48,7 @@ export const LampContainer = ({
       />
 
       {/* Text Content */}
-      <div className="relative z-50">{children}</div>
+      <div className="relative z-30">{children}</div>
     </div>
   );
 };

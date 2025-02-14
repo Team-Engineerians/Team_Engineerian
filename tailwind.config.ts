@@ -177,7 +177,9 @@ const config = {
   	}
   },
   plugins: [
-	require('tailwindcss-animate')]
+    require('tailwindcss-animate'),
+    require('tailwindcss-motion'),
+  ],
 };
 
 export default config;
