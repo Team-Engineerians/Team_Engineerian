@@ -8,6 +8,7 @@ import ServicesGrid from './_components/Service';
 import { OurWork } from './_components/OurWork';
 import Testimonials from './_components/Testimonials';
 import ReachUs from './_components/ReachUs';
+import Loading from './loading';
 
 export default async function Home() {
 
@@ -23,6 +24,7 @@ export default async function Home() {
         <Testimonials />
         <OurWork />
         <ReachUs />
+        <Loading />
       </main>
     </HydrateClient>
   );

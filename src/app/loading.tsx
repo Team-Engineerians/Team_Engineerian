@@ -1,58 +1,29 @@
-"use client";
+import type { NextPage } from 'next';
+import Image from "next/image";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-
-export default function LoadingScreen() {
-  const [showWelcome, setShowWelcome] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    const readyTimer = setTimeout(() => setShowWelcome(true), 2000); // Show "Welcome to ENGX LAB."
-    const fadeTimer = setTimeout(() => setFadeOut(true), 4000); // Start fade-out before redirect
-    const redirectTimer = setTimeout(() => router.push("/"), 5500); // Redirect after fade-out
-
-    return () => {
-      clearTimeout(readyTimer);
-      clearTimeout(fadeTimer);
-      clearTimeout(redirectTimer);
-    };
-  }, [router]);
-
+const Loading: NextPage = () => {
   return (
-    <motion.div
-      className="fixed top-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center px-4 text-center z-50"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: fadeOut ? 0 : 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }} // Smooth fade-out before redirect
-    >
-      <AnimatePresence mode="wait">
-        {!showWelcome ? (
-          <motion.h1
-            key="ready"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white whitespace-nowrap"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.2 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-          >
-            Are you ready?
-          </motion.h1>
-        ) : (
-          <motion.h1
-            key="welcome"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#001217] via-[#002E36] to-[#004954] bg-clip-text text-transparent whitespace-nowrap"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.2 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          >
-            Welcome to ENGX LAB.
-          </motion.h1>
-        )}
-      </AnimatePresence>
-    </motion.div>
+    <div className="w-full relative h-screen bg-black text-center text-white text-[64px] font-['Sequel_Sans'] flex items-center justify-center overflow-hidden">
+      {/* Animated Grid with Glowing Borders */}
+      <div className="absolute inset-0 grid grid-cols-5 grid-rows-10 sm:grid-cols-12 sm:grid-rows-6 opacity-20 mask-radial animate-border-glow z-10">
+        {Array.from({ length: 72 }, (_, i) => (
+          <div key={i} className="border border-gray-400 z-10"></div>
+        ))}
+      </div>
+      
+      {/* Rotating Logo */}
+      <div className="absolute font-sequel top-1/2 left-1/2 transform -translate-x-[83px] -translate-y-[4px] backdrop-blur-lg opacity-90">
+        ENGX
+      </div>
+      <Image 
+        className="relative w-[63px] h-[63px] mb-20 animate-spin-slow z-20" 
+        width={63} 
+        height={63} 
+        alt="" 
+        src="/Social_Icons/loading.svg" 
+      />
+    </div>
   );
-}
+};
+
+export default Loading;

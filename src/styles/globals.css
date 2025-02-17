@@ -188,4 +188,44 @@
   }
 }
 
+@keyframes borderGlowDiagonal {
+  0% {
+    border-color: rgba(255, 255, 255, 0.2);
+    opacity: 0.2;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.2);
+    opacity: 0.2;
+  }
+}
+
+.animate-border-glow {
+  animation: borderGlowDiagonal 2.5s linear infinite;
+  border-width: 1px;
+}
+
+@layer utilities {
+  .mask-radial {
+    mask-image: radial-gradient(ellipse 450px 300px at center, white, transparent);
+  }
+}
+
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 5s linear infinite;
+}
+
+
 
