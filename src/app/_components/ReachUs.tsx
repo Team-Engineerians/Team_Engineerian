@@ -111,7 +111,7 @@ const ReachUs = () => {
                 />
               </div>
               <div>
-                <label className="text-white block mb-2">Company/Organization</label>
+                <label className="text-white block mb-2">Company / Organization</label>
                 <input
                   type="text"
                   name="company"
