@@ -1,89 +1,62 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion,} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "~/lib/utils";
 
 export const FlipWords = ({
   words,
-  duration = 1500,
+  duration = 1000,
   className,
 }: {
   words: string[];
   duration?: number;
   className?: string;
 }) => {
-  const [currentWord, setCurrentWord] = useState(words[0]);
+  const [currentWord, setCurrentWord] = useState<string>(words[0] ?? ""); // Ensure it's always a string
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-  // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
-    const word = words[words.indexOf(currentWord) + 1] || words[0];
-    setCurrentWord(word);
+    if (words.length === 0) return;
+    const nextIndex = (words.indexOf(currentWord) + 1) % words.length;
+    setCurrentWord(words[nextIndex] ?? words[0] ?? ""); // Ensure it's always a string
     setIsAnimating(true);
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
-        startAnimation();
-      }, duration);
+    const interval = setInterval(() => {
+      if (!isAnimating) startAnimation();
+    }, duration);
+
+    return () => clearInterval(interval);
   }, [isAnimating, duration, startAnimation]);
 
   return (
     <AnimatePresence
-      onExitComplete={() => {
-        setIsAnimating(false);
-      }}
+      mode="wait"
+      onExitComplete={() => setIsAnimating(false)}
     >
       <motion.div
-        initial={{
-          opacity: 0,
-          y: 10,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 10,
-        }}
-        exit={{
-          opacity: 0,
-          y: -40,
-          x: 40,
-          filter: "blur(8px)",
-          scale: 2,
-          position: "absolute",
-        }}
-        className={cn(
-          "z-10 inline-block relative text-left text-white/20 hover:text-white/50 px-2",
-          className
-        )}
-        key={currentWord}
+        key={currentWord} // Ensure animation runs on word change
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -40, x: 40, filter: "blur(8px)", scale: 1.5 }}
+        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+        className={cn("relative inline-block text-left text-white/50 px-2", className)}
       >
-        {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
         {currentWord.split(" ").map((word, wordIndex) => (
           <motion.span
-            key={word + wordIndex}
+            key={`${word}-${wordIndex}`}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: wordIndex * 0.3,
-              duration: 0.3,
-            }}
+            transition={{ delay: wordIndex * 0.2, duration: 0.3 }}
             className="inline-block whitespace-nowrap"
           >
             {word.split("").map((letter, letterIndex) => (
               <motion.span
-                key={word + letterIndex}
+                key={`${word}-${letter}-${letterIndex}`}
                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{
-                  delay: wordIndex * 0.3 + letterIndex * 0.05,
-                  duration: 0.2,
-                }}
+                transition={{ delay: wordIndex * 0.2 + letterIndex * 0.05, duration: 0.2 }}
                 className="inline-block"
               >
                 {letter}
