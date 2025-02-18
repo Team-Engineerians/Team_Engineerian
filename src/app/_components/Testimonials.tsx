@@ -22,7 +22,7 @@ const TrustedByProfessionals: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-black text-white px-4">
+    <div className=" h-screen w-full flex flex-col items-center justify-center text-white px-4">
       {screenSize === 'desktop' && <DesktopView />}
       {screenSize === 'tablet' && <TabletView />}
       {screenSize === 'mobile' && <MobileView />}
@@ -70,11 +70,11 @@ const TabletView: React.FC = () => (
 );
 
 const MobileView: React.FC = () => (
-  <div className="flex gap-4 scroll-smooth overflow-x-auto h-[55vh] w-[80vw] snap-x snap-mandatory px-4">
+  <div className="flex gap-4 scroll-smooth mb-24 overflow-x-auto h-[55vh] w-[80vw] snap-x snap-mandatory p-2 items-center">
     {imageUrls.map((src, index) => (
       <div
         key={index}
-        className="h-[210px] w-[180px] bg-white rounded-lg bg-cover bg-center snap-start shrink-0"
+        className="h-[90%] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start shrink-0"
         style={{ backgroundImage: `url(${src})` }}
       ></div>
     ))}

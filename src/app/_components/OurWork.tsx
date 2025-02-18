@@ -9,7 +9,7 @@ export function OurWork() {
   ));
 
   return (
-    <div className="relative sm:m-h-screen w-full px-4 py-24 md:py-10 mt-10 sm:mt-16 md:mt-32">
+    <div className="relative sm:m-h-screen w-full px-4 py-10 md:py-10 mt-10 sm:mt-16 md:mt-32">
       <h2 className="mx-auto max-w-7xl text-center font-sequel mb-12 sm:mb-0 text-5xl text-white sm:text-4xl md:text-5xl lg:text-[64px]">
         We&apos;ve Built
       </h2>
