@@ -16,7 +16,7 @@ const TrustedByProfessionals: React.FC = () => {
       }
     };
 
-    handleResize(); // Call initially
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -26,14 +26,18 @@ const TrustedByProfessionals: React.FC = () => {
       {screenSize === 'desktop' && <DesktopView />}
       {screenSize === 'tablet' && <TabletView />}
       {screenSize === 'mobile' && <MobileView />}
-      
-      {/* Title */}
       <h2 className="text-[42px] sm:text-[64px] font-sequel text-center mt-[-60px] sm:mt-[-106px]">Trusted by Professionals</h2>
     </div>
   );
 };
 
-// Desktop View (Web)
+const imageUrls = [
+  img.src,
+  "/assets/testimonialcard.jpg",
+  "/assets/testimonialcard.jpg",
+  "/assets/testimonialcard.jpg",
+];
+
 const DesktopView: React.FC = () => (
   <div className='flex flex-row justify-center gap-4 w-[90vw]'>
     <div className='flex flex-col gap-4'>
@@ -53,32 +57,27 @@ const DesktopView: React.FC = () => (
   </div>
 );
 
-// Tablet View (iPad)
 const TabletView: React.FC = () => (
-  <div className='grid grid-cols-2 gap-4 scroll-smooth mb-44 overflow-y-auto h-[75vh] w-[80vw] place-items-center
- snap-y snap-mandatory'>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+  <div className="grid grid-cols-2 gap-4 overflow-y-auto h-[75vh] w-[80vw] place-items-center snap-y snap-mandatory">
+    {imageUrls.map((src, index) => (
+      <div
+        key={index}
+        className="h-[400px] w-[300px] bg-white rounded-lg bg-cover bg-center snap-start"
+        style={{ backgroundImage: `url(${src})` }}
+      ></div>
+    ))}
   </div>
 );
 
-// Mobile View (Phones)
 const MobileView: React.FC = () => (
-  <div className='grid grid-cols-1 gap-4  mb-32 overflow-y-auto h-[90vh] w-[90%] place-items-center snap-y snap-mandatory'>
-    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
-    <div className='h-[400px] w-[90%] bg-white rounded-lg bg-cover bg-center snap-start' style={{ backgroundImage: `url(${img.src})` }}></div>
+  <div className="flex gap-4 scroll-smooth overflow-x-auto h-[55vh] w-[80vw] snap-x snap-mandatory px-4">
+    {imageUrls.map((src, index) => (
+      <div
+        key={index}
+        className="h-[210px] w-[180px] bg-white rounded-lg bg-cover bg-center snap-start shrink-0"
+        style={{ backgroundImage: `url(${src})` }}
+      ></div>
+    ))}
   </div>
 );
 
